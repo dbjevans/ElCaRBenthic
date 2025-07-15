@@ -1,17 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% ElCaRBenthic v1.0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+
 % Compute temperature and/or Omega+/-[CO32-] from benthic foraminifera
 % Mg/Ca, B/Ca, Sr/Ca, or Mg/Li data
 % Monte Carlo uncertainty propagation can account for proxy value, 
 % calibration coefficient, and secondary parameter (MgCaSW, T, Omega, 
 % salinity, depth) uncertainties
-%
+
 % [TempOut,OmegaOut,CO3Out] = ...
 %    ElCaRBenthic(sampleage,sampledata,speciesID,elementID,Hin,temperature,...
 %    Omega,salinity,depth,plotFig)
-%
+
 % All input fields are required.
 % - sample age: in ka
 % - sample data: either one, two, four, or six columns (e.g. [Mg/Ca Sr/Ca], 
@@ -46,7 +46,7 @@
 %   value with or without uncertainty, or a vector the same size as sample
 %   data.
 % - plotFig: plot the results (1/0)
-%
+
 %
 % EXAMPLES:
 %
