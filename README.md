@@ -1,4 +1,7 @@
-ElCaRBenthic v1.0
+%%%%% ElCaRBenthic v1.0 %%%%%
+
+This script accompanies Nauter-Alves et al. (2025) Paleoceanography & Paleoclimatology. If it is useful to your research, please cite our paper. 
+Please forward suggestions for the Matlab version of the data processing code to David Evans (d.evans@soton.ac.uk)
 
 Compute temperature and/or Omega+/-[CO32-] from benthic foraminifera
 Mg/Ca, B/Ca, Sr/Ca, or Mg/Li data
