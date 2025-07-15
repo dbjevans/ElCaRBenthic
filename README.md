@@ -1,7 +1,8 @@
 %%%%% ElCaRBenthic v1.0 %%%%%
 
 This script accompanies Nauter-Alves et al. (2025) Paleoceanography & Paleoclimatology. If it is useful to your research, please cite our paper. 
-Please forward suggestions for the Matlab version of the data processing code to David Evans (d.evans@soton.ac.uk)
+Please forward suggestions for the Matlab version of this data processing code to David Evans (d.evans@soton.ac.uk)
+
 
 Compute temperature and/or Omega+/-[CO32-] from benthic foraminifera
 Mg/Ca, B/Ca, Sr/Ca, or Mg/Li data
@@ -9,9 +10,8 @@ Monte Carlo uncertainty propagation can account for proxy value,
 calibration coefficient, and secondary parameter (MgCaSW, T, Omega, 
 salinity, depth) uncertainties
 
-[TempOut,OmegaOut,CO3Out] = ...
-   ElCaRBenthic(sampleage,sampledata,speciesID,elementID,Hin,temperature,...
-   Omega,salinity,depth,plotFig)
+
+[TempOut,OmegaOut,CO3Out] = ElCaRBenthic(sampleage,sampledata,speciesID,elementID,Hin,temperature,Omega,salinity,depth,plotFig)
 
 All input fields are required.
 - sample age: in ka
@@ -49,18 +49,17 @@ All input fields are required.
 - plotFig: plot the results (1/0)
 
 
+
 EXAMPLES:
 
-[TempOut,OmegaOut,CO3Out] = ...
-   ElCaRBenthic(sampleage,sampledata,1,[1 3],NaN,NaN,NaN,[35 1],[2500 100],1)
+[TempOut,OmegaOut,CO3Out] = ElCaRBenthic(sampleage,sampledata,1,[1 3],NaN,NaN,NaN,[35 1],[2500 100],1)
 
 Calculate temperature, Omega, and [CO32-] using L. wuellerstorfi B/Ca and
 Mg/Ca. Derive [CO32-] from Omega and temperature assuming a salinity of
 35+/-1, and a pressure of 2500+/-100 dbar, and plot the results.
 
 
-[TempOut,OmegaOut,CO3Out] = ...
-   ElCaRBenthic(sampleage,sampledata,5,2,NaN,tempIn,NaN,[35 1],[2500 100],0)
+[TempOut,OmegaOut,CO3Out] = ElCaRBenthic(sampleage,sampledata,5,2,NaN,tempIn,NaN,[35 1],[2500 100],0)
 
 Calculate Omega, and [CO32-] using C. pachyderma Sr/Ca using an
 existing temperature record to correct for the temperature contol on 
@@ -69,9 +68,7 @@ assuming a salinity of 35+/-1, and a pressure of 2500+/-100 dbar, don't
 plot the results.
 
 
-[TempOut,OmegaOut,CO3Out] = ...
-   ElCaRBenthic(sampleage,sampledata,4,[1 3],[0.54 0.1],tempIn,NaN,[35 1],...
-   [2500 100],1)
+[TempOut,OmegaOut,CO3Out] = ElCaRBenthic(sampleage,sampledata,4,[1 3],[0.54 0.1],tempIn,NaN,[35 1],[2500 100],1)
 
 Calculate temperature, Omega, and [CO32-] using O. umbonatus B/Ca and 
 Mg/Ca. Use an O. umbonatus H = 0.54+/-0.1 (Evans et al., 2016). Derive 
